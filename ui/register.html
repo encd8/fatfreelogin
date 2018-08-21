@@ -1,0 +1,51 @@
+      <div class="page-single">
+        <div class="container">
+          <div class="row">
+            <div class="col col-login mx-auto">
+              <div class="text-center mb-6">
+                <img src="./demo/brand/tabler.svg" class="h-6" alt="">
+              </div>
+              <form class="card" action="./signup" method="post">
+
+                <check if="{{ @flash }}">
+                <true>
+                <div class="alert alert-danger" role="alert">
+                    {{ @flash }}
+                </div>
+                </true>
+                </check>
+
+                <div class="card-body p-6">
+                  <div class="card-title">Create new account</div>
+                  <div class="form-group">
+                    <label class="form-label" for='firstname'>First name</label>
+                    <input type="text" class="form-control" id='firstname' name='firstname' placeholder="Enter first name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for='lastname'>Last name</label>
+                    <input type="text" class="form-control" id='lastname' name='lastname' placeholder="Enter last name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="confirm_pass">Re-type password</label>
+                    <input type="password" class="form-control" id="confirm_pass" name="confirm_pass" placeholder="Confirm password">
+                  </div>
+                  <div class="form-footer">
+                    <button type="submit" value="submit" class="btn btn-primary btn-block">Create new account</button>
+                  </div>
+                </div>
+              </form>
+              <div class="text-center text-muted">
+                Already have account? <a href="./login">Sign in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
